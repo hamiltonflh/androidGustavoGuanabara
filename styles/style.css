@@ -4,21 +4,26 @@
 @font-face {
     font-family:'android';
     src: url('../fontes/idroid.otf') format('opentype');
-    font-weight:normal;
+    font-weight:'normal';
 }
 
 :root{
     --cor0: #c5ebd6;
     --corEscura: #2C332F;
-    --cor1: #52866A;
+    --cor1: #045328;
     --corPrincipal: #3DDB84;
     --cor2: #2fa866;
     --cor3: #4FB17B;
-    --corMenu: #1a5c37;
+    --corMenu: #0e3b21;
 
     --fonte_padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte_destaque: "Bebas Neue", cursive;
     --fonte_android: 'android', cursive;
+}
+
+*{
+    margin:0;
+    padding: 0;
 }
     
 body{
@@ -26,15 +31,82 @@ body{
     font-family: var(--fonte_padrao);
 }
 header {
-    
+    background-image: linear-gradient(to bottom, var(--cor1), var(--corMenu));
+    min-height: 150px;
+    padding-top: 40px;
 }
 
 header > h1{
-    color: var(--corEscura);
+    color: white;
     font-family: var(--fonte_destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.507);
+}
+
+header > p {
+    color:white;
+    font-family: var(--fonte_padrao);
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.507);
+}
+
+nav{
+    background-color: var(--corMenu);
+    padding:10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.521)
+}
+
+nav > a{
+    padding:10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-duration: .5s;
+}
+
+nav > a:hover{
+    background-color: var(--corPrincipal);
+    color:var(--corEscura);
+}
+
+main{
+    background-color: white;
+    max-width: 800px;
+    min-width: 300px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+    margin: auto;
 }
 
 main > h1{
     color: var(--corEscura);
     font-family: var(--fonte_android);
+}
+
+main > h2{
+    font-family: var(--fonte_android);
+}
+
+main img.bugdroid{
+    width:50%;
+    display: block;
+    margin:auto;
+}
+
+
+footer{
+    background-color: var(--cor1);
+    color: white;
+    margin-top: 30px;
 }
